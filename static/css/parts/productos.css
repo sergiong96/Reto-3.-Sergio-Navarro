@@ -1,0 +1,153 @@
+.product {
+    text-align: center;
+    width: 12rem;
+    height: 18rem;
+    padding: 0.5rem;
+    border: 1px solid gainsboro;
+    border-radius: 0.5rem;
+    position: relative;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 1px 2px lightgray;
+}
+
+.product a {
+    text-decoration: none;
+    color: black;
+}
+
+.product img {
+    height: 9rem;
+    width: 9rem;
+    margin-top: 0.5rem;
+}
+
+.product p {
+    margin: 0.2rem 0;
+}
+
+.product input[type="text"] {
+    width: 1rem;
+    text-align: center;
+    margin: 0 0.4rem;
+}
+
+.amount-div {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.4rem;
+}
+
+.amount-div button[type="button"] {
+    cursor: pointer;
+    display: flex;
+    border-radius: 1rem;
+}
+
+.amount-div button[type="button"] span {
+    font-size: 1rem;
+}
+
+.product .price {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 0.4rem 0;
+}
+
+.product .price p:nth-child(1) {
+    color: lightcoral;
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.product .price p:nth-child(2) {
+    font-size: small;
+}
+
+
+.product button[data-button-type="toBasket"] {
+    position: relative;
+    width: 10rem;
+    height: 2rem;
+    background-color: black;
+    border: none;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.product button[data-button-type="toBasket"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: lightcoral;
+    border-radius: 0.4rem;
+    transition: width 800ms ease-in-out, height 800ms ease-in-out;
+}
+
+.product button[data-button-type="toBasket"]:hover::before {
+    width: 100%;
+    height: 100%;
+    transition: width 800ms ease-in-out, height 800ms ease-in-out;
+}
+
+.product button[data-button-type="toBasket"] a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    z-index: 150;
+}
+
+.product .existence {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    border-left: 1px solid rgba(255, 0, 0, 0);
+    border-right: 1px solid rgba(255, 0, 0, 0);
+    align-items: center;
+    justify-content: center;
+    top: -1.4rem;
+    left: -1px;
+    font-size: smaller;
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.product .existence input {
+    border: none;
+    outline: none;
+    background-color: rgba(255, 0, 0, 0);
+    width: 1.5rem;
+}
+
+.product:hover .existence {
+    box-shadow: 2px -2px 1px 2px lightgray;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.product.without-stock {
+    filter: grayscale(1);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.product.without-stock::before {
+    content: "Sin existencias";
+    position: absolute;
+    font-size: 2rem;
+    transform: rotate(45deg);
+    white-space: nowrap;
+    top: 6rem;
+    left: 0;
+    backdrop-filter: contrast(50%);
+    font-weight: bold;
+}

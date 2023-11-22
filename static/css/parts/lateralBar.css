@@ -1,0 +1,96 @@
+aside#lateralBar {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    background-color: lightblue;
+    position: relative;
+    width: 14rem;
+    height: 100%;
+    margin-right: 3rem;
+}
+
+aside#lateralBar>p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+aside#lateralBar a {
+    display: grid;
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+aside#lateralBar #mainCategoryList {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    z-index: 999;
+    list-style-type: none;
+    padding: 0;
+}
+
+aside#lateralBar #mainCategoryList>li {
+    display: flex;
+    position: relative;
+    margin: 1rem 0;
+    width: 12rem;
+    height: 3rem;
+    padding: 0 1rem;
+}
+
+aside#lateralBar #mainCategoryList>li:hover>i:not(.fa-solid.fa-chevron-right) {
+    background-color: lightcoral;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+aside#lateralBar #mainCategoryList>li:hover>a {
+    background-color: lightcoral;
+}
+
+aside#lateralBar #mainCategoryList>li:hover>i.fa-solid.fa-chevron-right {
+    background-color: lightcoral;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+
+aside#lateralBar #mainCategoryList i {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.2rem;
+}
+
+aside#lateralBar #mainCategoryList i:not(.fa-solid.fa-chevron-right) {
+    padding-right: 0.3rem;
+}
+
+aside#lateralBar .subcategory {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 14rem;
+    height: 3rem;
+}
+
+aside#lateralBar #mainCategoryList>li:hover .subcategory {
+    display: flex;
+    background-color: lightblue;
+    gap: 2rem;
+}
+
+aside#lateralBar #mainCategoryList>li:hover .subcategory li {
+    padding: 0 1rem;
+    height: 3rem;
+}
+
+aside#lateralBar #mainCategoryList .subcategory li:hover a {
+    color: lightcoral;
+    font-weight: bold;
+}

@@ -1,0 +1,242 @@
+body.opacado {
+    overflow-y: hidden;
+}
+
+#heroAdmin {
+    display: grid;
+    grid-template-columns: 20rem 0.98fr;
+    grid-template-rows: auto;
+}
+
+div#opacar.active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+#heroAdmin>section h2 {
+    text-align: center;
+}
+
+#heroAdmin>section {
+    display: none;
+}
+
+#heroAdmin>section.active {
+    display: block;
+}
+
+#heroAdmin #navBarAdmin {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: lightblue;
+    margin-right: 5rem;
+}
+
+#heroAdmin #navBarAdmin ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#heroAdmin #navBarAdmin li {
+    width: 100%;
+    height: 5rem;
+}
+
+#heroAdmin #navBarAdmin a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#heroAdmin #navBarAdmin li a:not(.active):hover {
+    transform: scale(1.05);
+}
+
+#heroAdmin #navBarAdmin a.active {
+    background-color: rgb(70, 70, 239);
+    color: white;
+}
+
+#heroAdmin #activeProducts {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#heroAdmin #activeProducts dialog button[data-action="close"] {
+    display: block;
+    margin-left: auto;
+}
+
+#heroAdmin #activeProducts button {
+    cursor: pointer;
+}
+
+#heroAdmin #activeProducts dialog input {
+    margin-bottom: 1rem;
+}
+
+#heroAdmin #activeProducts #addProduct {
+    margin: 1rem 0;
+}
+
+#heroAdmin #activeProducts #addProduct button {
+    padding: 0.5rem;
+    background-color: lightblue;
+    border-radius: 0.5rem;
+}
+
+#heroAdmin #activeProducts #addProduct button:hover {
+    box-shadow: 1px 1px 2px 0px black;
+}
+
+#heroAdmin #activeProducts #addProduct button:hover i {
+    color: lightcoral;
+}
+
+#heroAdmin #activeProducts #addProduct i {
+    margin-right: 0.5rem;
+}
+
+#heroAdmin #activeProducts table {
+    border-collapse: collapse;
+}
+
+#heroAdmin #activeProducts table thead tr,
+#heroAdmin #activeProducts table tbody tr {
+    border-bottom: 1px solid black;
+}
+
+#heroAdmin #activeProducts table td:not(td:nth-child(3)) {
+    text-align: center;
+}
+
+#heroAdmin #activeProducts table tbody td:nth-child(3) {
+    width: 30%;
+}
+
+#heroAdmin #activeProducts table tbody td:nth-child(5) {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#heroAdmin #activeProducts table td img {
+    width: 3rem;
+    padding: 0.5rem;
+}
+
+#heroAdmin #activeProducts dialog form {
+    display: flex;
+    flex-direction: column;
+}
+
+#heroAdmin #activeProducts #activateZoom {
+    margin-left: 0.3rem;
+}
+
+#heroAdmin #activeProducts #activateZoom.active {
+    background-color: green;
+    color: white;
+}
+
+#follow {
+    display: none;
+}
+
+#follow.active {
+    display: block;
+    position: fixed;
+    border: 1px solid #ccc;
+    width: 10px;
+    height: 10px;
+}
+
+#follow.active img {
+    width: 10rem;
+}
+
+#heroAdmin #pagination {
+    display: flex;
+    justify-content: end;
+    margin: 2rem 0;
+}
+
+#heroAdmin #pagination button:nth-child(1),
+#heroAdmin #pagination button:not(:nth-child(1)) {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0 1rem;
+}
+
+#heroAdmin #pagination button:not(:nth-child(1)):hover {
+    background-color: gainsboro;
+    border-radius: 0.2rem;
+}
+
+#heroAdmin #pagination button:nth-child(1)>i {
+    color: darkgray;
+
+}
+
+#heroAdmin #pagination ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    gap: 2rem;
+}
+
+#heroAdmin #pagination ul a {
+    text-decoration: none;
+    color: blue;
+}
+
+#heroAdmin #pagination ul a:hover {
+    text-decoration: underline;
+}
+
+#heroAdmin #lastOrders {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#heroAdmin #lastOrders table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#heroAdmin #lastOrders table img {
+    width: 5rem;
+    margin: 0 0.5rem;
+}
+
+#heroAdmin #lastOrders table tr {
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+#heroAdmin #lastOrders table td {
+    padding: 1rem 2rem;
+}
+
+#heroAdmin #lastOrders table tbody tr {
+    height: 5rem;
+}

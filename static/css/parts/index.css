@@ -1,0 +1,248 @@
+#heroIndex #goToProducts {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+}
+
+#heroIndex #goToProducts #toFeatured {
+    grid-row: 1;
+    grid-column: 1;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 4rem auto;
+}
+
+#heroIndex #goToProducts #toFeatured div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#heroIndex #goToProducts #toFeatured p {
+    color: lightcoral;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+#heroIndex #goToProducts #toFeatured a {
+    text-decoration: none;
+    color: lightcoral;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border: 1px solid lightcoral;
+    border-radius: 0.8rem;
+    transition: 400ms ease-in-out;
+}
+
+#heroIndex #goToProducts #toFeatured a:hover {
+    box-shadow: 0 0 5px 2px lightcoral;
+    background-color: lightcoral;
+    color: black;
+    transition: 400ms ease-in-out;
+}
+
+#heroIndex #goToProducts #toFeatured video {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    object-fit: cover;
+}
+
+#heroIndex #goToProducts #toCategory {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+#heroIndex #goToProducts #toCategory #categories {
+    display: grid;
+    grid-template-columns: repeat(3, 12rem);
+    gap: 0.5rem;
+}
+
+#heroIndex #goToProducts #toCategory #categories .category {
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+#heroIndex #goToProducts #toCategory #categories .category p {
+    position: relative;
+    z-index: 10;
+}
+
+#heroIndex #goToProducts #toCategory #categories .category p::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: 500ms ease-in-out;
+    z-index: -1;
+}
+
+#heroIndex #goToProducts #toCategory #categories .category:hover p::before {
+    background-color: lightblue;
+    width: 100%;
+    transition: 500ms ease-in-out;
+}
+
+#heroIndex #goToProducts #toCategory #categories .category:hover img {
+    outline: 1px solid gainsboro;
+    border-radius: 0.5rem;
+}
+
+#heroIndex #goToProducts #toCategory .category img {
+    width: 5rem;
+    height: 4rem;
+    padding: 0.5rem;
+}
+
+#heroIndex #goToProducts #toCategory .category a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+
+#heroIndex #goToProducts #toCategory .category a p {
+    margin: 0.6rem 0;
+}
+
+
+#heroIndex #promotions {
+    display: grid;
+    grid-template-columns: 30rem 30rem;
+    grid-template-rows: 2rem 10rem 10rem;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+#heroIndex #promotions h2 {
+    grid-column: 1 / 3;
+
+}
+
+#heroIndex #promotions .promotion img {
+    width: 100%;
+    height: 100%;
+}
+
+#heroIndex #mainReviews {
+    display: grid;
+    grid-template-rows: auto auto;
+    position: relative;
+    justify-content: center;
+    margin: 5rem auto;
+    width: 69.5rem;
+    overflow: hidden;
+}
+#heroIndex #mainReviews h2{
+    text-align: center;
+    grid-row: 1;
+    grid-column: 1/3;
+}
+
+#heroIndex #mainReviews #reviewsContainer {
+    display: flex;
+    z-index: -1;
+    transition: transform 1s ease-in-out;
+    grid-row: 2;
+}
+
+#heroIndex #mainReviews .review {
+    padding: 1rem;
+    flex: 32rem 0 0;
+    background-color: gainsboro;
+    border-right: 1px solid black;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    position: relative;
+}
+
+
+#heroIndex #mainReviews .review .name {
+    grid-row: 1;
+    grid-column: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 80%;
+}
+
+#heroIndex #mainReviews .review .img {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+#heroIndex #mainReviews .review .date {
+    grid-row: 1;
+    grid-column: 3;
+    position: absolute;
+    top: 0;
+    right: 15%;
+    font-size: 80%;
+}
+
+#heroIndex #mainReviews .review .content {
+    grid-row: 2;
+    grid-column: 1/4;
+}
+
+#heroIndex #mainReviews .review .rating {
+    grid-row: 3;
+    grid-column: 1/4;
+    color: red;
+}
+
+#heroIndex #mainReviews .review .rating i {
+    margin: 0 0.2rem;
+}
+
+#heroIndex #mainReviews button {
+    z-index: 9999;
+    border: none;
+    background-color: white;
+    padding: 0;
+    grid-row: 2;
+}
+
+#heroIndex #mainReviews button i {
+    font-size: 2rem;
+    color: gray;
+    cursor: pointer;
+}
+
+#heroIndex #mainReviews button#prevReviews i:hover {
+    color: black;
+    transform: translateX(2px);
+}
+
+#heroIndex #mainReviews button#nextReviews i:hover {
+    color: black;
+    transform: translateX(-2px);
+}
+
+#heroIndex #mainReviews .review img {
+    display: block;
+    margin: 0 auto;
+    width: 4rem;
+    height: 3rem;
+}

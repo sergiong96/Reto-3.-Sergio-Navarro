@@ -1,0 +1,111 @@
+#heroCategory {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto;
+}
+
+#heroCategory #titleDescription {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+}
+
+
+#heroCategory #searchForm {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 2rem auto 3rem;
+}
+
+#heroCategory #searchForm form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+#heroCategory #searchForm form>i {
+    position: absolute;
+    left: 0;
+    color: darkgray;
+}
+
+#heroCategory #searchForm form input {
+    width: 25rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+}
+
+#heroCategory #searchForm form input:focus {
+    outline: none;
+}
+
+#heroCategory #searchForm form input+div {
+    width: 0;
+    height: 2px;
+    background-color: lightcoral;
+    position: absolute;
+    bottom: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+
+#heroCategory #searchForm form input:focus+div,
+#heroCategory #searchForm form input:not(:placeholder-shown)+div {
+    width: 100%;
+    transition: width 0.5s ease-in-out;
+}
+
+
+#heroCategory #productList {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: auto auto auto;
+    row-gap: 4rem;
+}
+
+#heroCategory #pagination {
+    grid-row: 4;
+    grid-column: 2;
+    display: flex;
+    margin: 2rem auto 0;
+}
+
+#heroCategory #pagination button:nth-child(1),
+#heroCategory #pagination button:not(:nth-child(1)) {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0 1rem;
+}
+
+#heroCategory #pagination button:not(:nth-child(1)):hover {
+    background-color: gainsboro;
+    border-radius: 0.2rem;
+}
+
+#heroCategory #pagination button:nth-child(1)>i {
+    color: darkgray;
+
+}
+
+#heroCategory #pagination ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    gap: 2rem;
+}
+
+#heroCategory #pagination ul a {
+    text-decoration: none;
+    color: blue;
+}
+
+#heroCategory #pagination ul a:hover {
+    text-decoration: underline;
+}

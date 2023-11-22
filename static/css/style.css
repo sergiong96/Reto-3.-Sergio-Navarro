@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('normalize/normalize.css');
+@import url('parts/header.css');
+@import url('parts/navBar.css');
+@import url('parts/index.css');
+@import url('parts/destacados.css');
+@import url('parts/categorias.css');
+@import url('parts/sobreNosotros.css');
+@import url('parts/contacto.css');
+@import url('parts/login.css');
+@import url('parts/detalleProducto.css');
+@import url('parts/adminPanel.css');
+@import url('parts/footer.css');
+@import url('parts/productos.css');
+@import url('parts/lateralBar.css');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    position: relative;
+    width: 100%;
+}
